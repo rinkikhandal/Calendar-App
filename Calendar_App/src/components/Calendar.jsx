@@ -53,7 +53,7 @@ const Calendar = (props) => {
             className={
               supYear === Year && supMonth === Month && item[0] === Date
                 ? "highlight"
-                : ""
+                : "normal"
             }
             style={{ color: item[1] }}
           >

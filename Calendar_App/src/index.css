@@ -25,11 +25,13 @@
     @apply py-1 my-4 bg-neutral-300 grid grid-cols-7 place-items-center rounded;
   }
   .dates-arr {
-    @apply h-full px-1 grid grid-cols-7 place-items-center;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    @apply h-4/6 w-full px-1 grid grid-cols-7 grid-rows-6 gap-x-[0.2rem] gap-y-[0.5rem] place-items-center;
   }
   .highlight {
-    @apply p-1 px-2 bg-neutral-600  rounded-full;
+    @apply h-full w-[68%] bg-neutral-600  rounded-full cursor-pointer grid place-items-center;
     color: white !important;
+  }
+  .normal {
+    @apply h-full w-[68%] rounded-full cursor-pointer hover:border-neutral-300 hover:border grid place-items-center transition-all;
   }
 }
