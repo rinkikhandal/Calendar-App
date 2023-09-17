@@ -13,7 +13,7 @@
     @apply min-h-screen bg-neutral-200 grid place-items-center;
   }
   .cal {
-    @apply h-[24rem] w-[26rem] p-4 bg-white border border-gray-400 rounded;
+    @apply h-[24rem] max-w-[26rem] w-[90%]  p-4 bg-white border border-gray-400 rounded;
   }
   .heading {
     @apply grid grid-cols-2 items-center;
