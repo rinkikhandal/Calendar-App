@@ -1,19 +1,24 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { Months, Days } from "./components/Date";
+import { Months } from "./components/Date";
 import Calendar from "./components/Calendar";
+import { DatesContext } from "./context/DatesContext";
 
 function App() {
-  const [supMonth, setSupMonth] = useState(new Date().getMonth());
-  const [supYear, setSupYear] = useState(new Date().getFullYear());
-  const [j, setJ] = useState(null);
-  const [date, setDate] = useState({
-    Year: null,
-    Month: null,
-    Date: null,
-  });
-  const [loading, setLoading] = useState(true);
-  const [leapYear, setLeapYear] = useState(false);
+  const {
+    supMonth,
+    setSupMonth,
+    j,
+    setJ,
+    supYear,
+    setSupYear,
+    date,
+    setDate,
+    loading,
+    setLoading,
+    leapYear,
+    setLeapYear,
+  } = useContext(DatesContext);
 
   useEffect(() => {
     getDate();
@@ -68,6 +73,10 @@ function App() {
     isLeapYear(supYear);
   };
 
+  const handleYearChange = () => {
+    return "hi";
+  };
+
   return (
     <div className='main-container font-main'>
       {loading ? (
@@ -75,7 +84,7 @@ function App() {
       ) : (
         <main className='cal'>
           <div className='heading'>
-            <div className='justify-self-start'>
+            <div className='justify-self-start' onClick={handleYearChange}>
               <span>{Months[supMonth].slice(0, 3)} </span>
               <span>{supYear}</span>
             </div>
@@ -87,12 +96,6 @@ function App() {
                 <IoIosArrowForward />
               </span>
             </div>
-          </div>
-
-          <div className='days'>
-            {Days.map((day) => {
-              return <span key={day}>{day}</span>;
-            })}
           </div>
           <Calendar
             supMonth={supMonth}

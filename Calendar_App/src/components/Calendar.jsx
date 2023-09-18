@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { memo, useEffect, useState } from "react";
-import { Number_Days } from "./Date";
+import { Number_Days, Days } from "./Date";
 import PropTypes from "prop-types";
 
 const Calendar = (props) => {
@@ -45,22 +45,29 @@ const Calendar = (props) => {
   };
 
   return (
-    <div className='dates-arr'>
-      {arr.map((item, index) => {
-        return (
-          <span
-            key={index}
-            className={
-              supYear === Year && supMonth === Month && item[0] === Date
-                ? "highlight"
-                : "normal"
-            }
-            style={{ color: item[1] }}
-          >
-            {item[0]}
-          </span>
-        );
-      })}
+    <div className='calendar-days'>
+      <div className='days'>
+        {Days.map((day) => {
+          return <span key={day}>{day}</span>;
+        })}
+      </div>
+      <div className='dates-arr'>
+        {arr.map((item, index) => {
+          return (
+            <span
+              key={index}
+              className={
+                supYear === Year && supMonth === Month && item[0] === Date
+                  ? "highlight"
+                  : "normal"
+              }
+              style={{ color: item[1] }}
+            >
+              {item[0]}
+            </span>
+          );
+        })}
+      </div>
     </div>
   );
 };
