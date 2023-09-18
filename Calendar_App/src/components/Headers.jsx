@@ -62,15 +62,20 @@ const Headers = () => {
 
   return (
     <div className='heading'>
-      <div className='justify-self-start year' onClick={handleYearClick}>
+      <div
+        className={
+          yearCalendar ? "justify-self-start " : "justify-self-start year"
+        }
+        onClick={handleYearClick}
+      >
         {yearCalendar ? "" : <span>{Months[supMonth].slice(0, 3)} </span>}
         <span>{supYear}</span>
       </div>
       <div className='justify-self-end flex'>
-        <span className='btn btn-for' onClick={handleForwardBtn}>
+        <span className='btn' onClick={handleForwardBtn}>
           <IoIosArrowBack />
         </span>
-        <span className='btn btn-back' onClick={handleBackwardBtn}>
+        <span className='btn' onClick={handleBackwardBtn}>
           <IoIosArrowForward />
         </span>
       </div>
