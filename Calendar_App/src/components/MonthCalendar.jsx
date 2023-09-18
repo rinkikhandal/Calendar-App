@@ -1,16 +1,16 @@
 /* eslint-disable react-refresh/only-export-components */
-import { memo, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Number_Days, Days } from "./Date";
-import PropTypes from "prop-types";
+import DatesContext from "../context/DatesContext";
 
-const Calendar = (props) => {
+const MonthCalendar = () => {
   const {
     supMonth,
     date: { Month, Year, Date },
     supYear,
     leapYear,
     j,
-  } = props;
+  } = useContext(DatesContext);
 
   const [arr, setArr] = useState([]);
 
@@ -72,12 +72,4 @@ const Calendar = (props) => {
   );
 };
 
-Calendar.propTypes = {
-  supMonth: PropTypes.number.isRequired,
-  supYear: PropTypes.number.isRequired,
-  leapYear: PropTypes.bool.isRequired,
-  j: PropTypes.number.isRequired, // You might need to adjust this based on your actual prop type
-  date: PropTypes.instanceOf(Date).isRequired,
-};
-
-export default memo(Calendar);
+export default MonthCalendar;

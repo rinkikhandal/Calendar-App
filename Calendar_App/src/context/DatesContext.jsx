@@ -14,6 +14,7 @@ export const DatesProvider = ({ children }) => {
   });
   const [loading, setLoading] = useState(true);
   const [leapYear, setLeapYear] = useState(false);
+  const [yearCalendar, setYearCalendar] = useState(false);
 
   return (
     <DatesContext.Provider
@@ -30,6 +31,8 @@ export const DatesProvider = ({ children }) => {
         setLoading,
         leapYear,
         setLeapYear,
+        yearCalendar,
+        setYearCalendar,
       }}
     >
       {children}
