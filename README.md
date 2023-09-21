@@ -7,3 +7,8 @@ __Year View__: Switch to a year view to see all months in a year at once.
 
 ### Working-Link - https://calendar-app-rinki.vercel.app/
 
+#### Screen Shots
+![image](https://github.com/rinkikhandal/Calendar-App/assets/99892608/2f4bbd7d-1478-4d20-a8f2-a8312b37d82f)
+
+
+![image](https://github.com/rinkikhandal/Calendar-App/assets/99892608/ec929fd0-9624-4558-9d73-ab457bac7b56)
