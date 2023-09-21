@@ -3,13 +3,11 @@ import DatesContext from "../context/DatesContext";
 import { Months } from "./Date";
 
 const YearsCalendar = () => {
-  const { yearCalendar, setYearCalendar, supMonth, setSupMonth, supYear } =
-    useContext(DatesContext);
+  const { setYearCalendar, setSupMonth } = useContext(DatesContext);
 
   const handleMonthClick = (index) => {
     setSupMonth(index);
     setYearCalendar(false);
-    console.log("clicked month", supMonth, supYear, yearCalendar);
   };
 
   return (

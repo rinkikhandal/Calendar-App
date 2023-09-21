@@ -6,9 +6,9 @@ import DatesContext from "../context/DatesContext";
 const MonthCalendar = () => {
   const {
     supMonth,
-    date: { Month, Year, Date },
     supYear,
     arr,
+    date: { Month, Date, Year },
   } = useContext(DatesContext);
 
   return (

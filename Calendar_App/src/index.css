@@ -21,7 +21,11 @@
   .year {
     @apply cursor-pointer hover:text-blue-600 active:text-blue-900 transition-all;
   }
+  .year {
+    @apply cursor-pointer hover:text-blue-600 active:text-blue-900 transition-all;
+  }
   .btn {
+    @apply p-1 mx-1 border border-neutral-400 rounded-full cursor-pointer hover:border-blue-500  hover:text-blue-600 transition-all active:text-blue-900;
     @apply p-1 mx-1 border border-neutral-400 rounded-full cursor-pointer hover:border-blue-500  hover:text-blue-600 transition-all active:text-blue-900;
   }
 
