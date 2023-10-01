@@ -24,7 +24,10 @@ const MonthCalendar = () => {
             <span
               key={index}
               className={
-                supYear === Year && supMonth === Month && item[0] === Date
+                supYear === Year &&
+                supMonth === Month &&
+                item[0] === Date &&
+                item[1] === "black"
                   ? "highlight"
                   : "normal"
               }
